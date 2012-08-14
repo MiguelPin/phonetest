@@ -7,7 +7,7 @@
 	<name>CRPROJECT</name>
 
 	<description>
-		
+		CR V.0.0.2
 	</description>
 
 	<author href="http://cr.i-solucions.com"
@@ -15,19 +15,16 @@
 		Miguel Pin
 	</author>
 
-	
-	<icon src="assets/icons/icon.png" width="57" height="57"  gap:role="default"/>
-	<icon src="assets/icons/icon-72.png" gap:platform="ios" width="72" height="72" />
-	<icon src="assets/icons/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+<icon src="assets/icons/icon.png" width="57" height="57"  gap:role="default"/>
+<icon src="assets/icons/icon-72.png" gap:platform="ios" width="72" height="72" />
+<icon src="assets/icons/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
 
+<icon src="assets/icons/icon.png" gap:platform="android" gap:density="ldpi" />
+<icon src="assets/icons/icon-72.png" gap:platform="android" gap:density="mdpi" />
+<icon src="assets/icons/icon_at_2x.png" gap:platform="android" gap:density="hdpi" />
 
-	<icon src="assets/icons/icon.png" gap:platform="android" gap:density="ldpi" />
-	<icon src="assets/icons/icon-72.png" gap:platform="android" gap:density="mdpi" />
-	<icon src="assets/icons/icon_at_2x.png" gap:platform="android" gap:density="hdpi" />
-
-
-	<icon src="assets/icons/icon.png" gap:platform="winphone" />
-	<icon src="assets/icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+<icon src="assets/icons/icon.png" gap:platform="winphone" />
+<icon src="assets/icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
 
 
 <gap:splash src="assets/splash/ios/Default.png" width="320" height="480" gap:platform="ios"  />
@@ -39,7 +36,7 @@
 <gap:splash src="assets/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <gap:splash src="assets/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 
-<gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
+<gap:splash src="splash/android/ldpi.png" gap:platform="blackberry" />
 
 <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
 
