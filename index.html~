@@ -64,8 +64,8 @@ button {
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview">
-			<li><a data-role=button data-rel="internal" data-target="_self" href="http://cr.i-solucions.com/">LOGIN</a></li>
-            <li><a data-role=button data-rel="internal" data-target="_self"  href="http://cr.i-solucions.com/registro.html">REGISTER</a></li>
+			<li><a data-role=button href="http://cr.i-solucions.com/">LOGIN</a></li>
+            <li><a data-role=button href="http://cr.i-solucions.com/registro.html">REGISTER</a></li>
 		</ul>		
 	</div>
 	<div data-role="footer" data-postition=fixed>
