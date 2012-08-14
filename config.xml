@@ -37,6 +37,7 @@
 <gap:splash src="assets/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 
 <gap:splash src="splash/android/ldpi.png" gap:platform="blackberry" />
+<icon src="assets/icons/icon.png" width="57" height="57" gap:platform="blackberry" gap:role="default"/>
 
 <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
 
