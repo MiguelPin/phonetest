@@ -55,6 +55,8 @@
 <preference name="webviewbounce" value="false" />
 <preference name="ios-statusbarstyle" value="black-opaque" />
 
+<gap:plugin name="ChildBrowser" version="~3" /> 
+
 
 <access origin="http://cr.i-solucions.com" subdomains="true"/>
 <access origin="http://pro1.i-solucions.com" subdomains="true"/>
@@ -63,7 +65,7 @@
 <access origin="http://flickr.com" subdomains="true" />
 <access origin="http://youtube.com" subdomains="true" />
 <access origin="http://facebook.com" subdomains="true" />
-
+<feature name="http://plugins.phonegap.com/ChildBrowser/2.0.1" />
 <feature name="http://api.phonegap.com/1.0/battery"/>
 <feature name="http://api.phonegap.com/1.0/camera"/>
 <feature name="http://api.phonegap.com/1.0/contacts"/>
