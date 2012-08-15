@@ -1,56 +1,47 @@
-// 
-//  --- our app behavior logic ---
-//
-run(function () {
-    // immediately invoked on first run
-    var init = (function () {
-        if (navigator.network.connection.type == Connection.NONE) {
-            alert("No tienes conexi&oacute;n a internet");
-        } else {
-            //alert("We can reach Google - get ready for some awesome maps!");
-        }
-    })();
-    
-    // a little inline controller
-    when('#welcome');
-    when('#settings', function() {
-		// load settings from store and make sure we persist radio buttons.
-		store.get('config', function(saved) {
-			if (saved) {
-				if (saved.map) {
-					x$('input[value=' + saved.map + ']').attr('checked',true);
-				}
-				if (saved.zoom) {
-					x$('input[name=zoom][value="' + saved.zoom + '"]').attr('checked',true);
-				}
-			}
-		});
-	});
-    when('#map', function () {
-        store.get('config', function (saved) {
-            // construct a gmap str
-            var map  = saved ? saved.map || ui('map') : ui('map')
-            ,   zoom = saved ? saved.zoom || ui('zoom') : ui('zoom')
-            ,   path = "http://maps.google.com/maps/api/staticmap?center=";
-			
-            navigator.geolocation.getCurrentPosition(function (position) {
-                var location = "" + position.coords.latitude + "," + position.coords.longitude;
-                path += location + "&zoom=" + zoom;
-                path += "&size=250x250&maptype=" + map + "&markers=color:red|label:P|";
-                path += location + "&sensor=false";
+function init() {
+ document.addEventListener("deviceready", deviceReady, true);
+ delete init;
+}
 
-                x$('img#static_map').attr('src', path);
-            }, function () {
-                x$('img#static_map').attr('src', "assets/img/gpsfailed.png");
-            });
-        });
-    });
-    when('#save', function () {
-        store.save({
-            key:'config',
-            map:ui('map'),
-            zoom:ui('zoom')
-        });
-        display('#welcome');
-    });
-});
+
+function checkPreAuth() {
+    var form = $("#loginForm");
+    if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
+        $("#username", form).val(window.localStorage["username"]);
+        $("#password", form).val(window.localStorage["password"]);
+        handleLogin();
+    }
+}
+
+function handleLogin() {
+    var form = $("#loginForm");    
+    //disable the button so we can't resubmit while we wait
+    $("#submitButton",form).attr("disabled","disabled");
+    var u = $("#username", form).val();
+    var p = $("#password", form).val();
+    console.log("click");
+    if(u != '' && p!= '') {
+       $.post("http://cr.i-solucions.com/sc.html&returnformat=json", {user:u,pass:p}, function(res) {
+           if(res == true) {
+               //store
+                window.localStorage["username"] = u;
+               window.localStorage["password"] = p;             
+               $.mobile.changePage("http://cr.i-solucions.com/sc.html");
+           } else {
+                navigator.notification.alert("Your login failed", function() {});
+            }
+         $("#submitButton").removeAttr("disabled");
+        },"json");
+    } else {
+        //Thanks Igor!
+        navigator.notification.alert("You must enter a username and password", function() {});
+       $("#submitButton").removeAttr("disabled");
+    }
+    return false;
+}
+
+function deviceReady() {
+    
+ $("#loginForm").on("submit",handleLogin);
+
+}

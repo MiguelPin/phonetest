@@ -23,7 +23,7 @@
 <link type="text/css" rel="stylesheet"  href="assets/css/CR.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/custom.css" />   
 
-<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 </head>
 
 <body onload="init()"  xmlns:fb="http://www.facebook.com/2008/fbml">
@@ -33,19 +33,17 @@
  
 <div id="loginPage" data-role="page">
 
-   <div data-role="header" data-theme="h" data-position="fixed">
-<h1>CR</h1>
-	</div>
+   <div data-role="header" data-theme="h" data-position="fixed"><h1>CR</h1></div>
 
     <div data-role="content">    
-
+		<br /><br />
        <form id="loginForm">
-      <div data-role="fieldcontain" class="ui-hide-label">
+      <div class="ui-hide-label">
            <label for="username">Username:</label>
            <input type="text" name="username" id="username" value="" placeholder="Username" />
        </div>
 
-        <div data-role="fieldcontain" class="ui-hide-label">
+        <div  class="ui-hide-label">
           <label for="password">Password:</label>
            <input type="password" name="password" id="password" value="" placeholder="Password" />
        </div>
@@ -53,20 +51,19 @@
         <input type="submit" value="Login" id="submitButton">
         </form>
        
-  </div>
+  	</div>
 
-   <div data-role="footer">
-        <h4>&copy; CR</h4>
+   <div data-role="footer" >
+        <p>&copy; CR</p>
   </div>
 
 </div>
 
 
-</div>
-47<script>
-48 $("#loginPage").live("pageinit", function(e) {
-49        checkPreAuth();
-50    });
-51</script>
+<script>
+ $("#loginPage").live("pageinit", function(e) {
+        checkPreAuth();
+    });
+</script>
 </body>
 </html>
