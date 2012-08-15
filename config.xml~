@@ -2,17 +2,17 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.crproject.cr"
-	version 	= "0.0.2">
+	version 	= "0.0.3">
 
 	<name>CRPROJECT</name>
 
 	<description>
-		CR V.0.0.2
+		Beta 0.0.3
 	</description>
 
-	<author href="http://cr.i-solucions.com"
+	<author href="http://i-solucions.com"
 		email="miquelpin@gmail.com">
-		Miguel Pin
+		Miguel Pin 
 	</author>
 
 <icon src="assets/icons/icon.png" width="57" height="57"  gap:role="default"/>
@@ -47,7 +47,7 @@
 <preference name="android-maxSdkVersion" value="15" />
 
 
-<preference name="target-device" value="universal" />
+<preference name="target-device" value="handset" />
 <preference name="phonegap-version" value="1.9.0" />
 
 
@@ -62,6 +62,7 @@
 <access origin="http://phonegap.com" subdomains="true" />
 <access origin="http://flickr.com" subdomains="true" />
 <access origin="http://youtube.com" subdomains="true" />
+<access origin="http://facebook.com" subdomains="true" />
 
 <feature name="http://api.phonegap.com/1.0/battery"/>
 <feature name="http://api.phonegap.com/1.0/camera"/>
@@ -71,6 +72,7 @@
 <feature name="http://api.phonegap.com/1.0/media"/>
 <feature name="http://api.phonegap.com/1.0/network"/>
 <feature name="http://api.phonegap.com/1.0/notification"/>
+<feature name="http://api.phonegap.com/1.0/device"/>
 
 
 	<preference name="orientation" value="portrait" />
