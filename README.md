@@ -1,6 +1,4 @@
 CR-PROJECT
-
-APP START BETA O.0.4
 ---
-PRIVATE
+Private App (Beta)
 
