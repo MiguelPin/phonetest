@@ -44,18 +44,20 @@
 
 <div data-role="header" data-position="fixed" data-theme="h" style="border:0;"> 
 
-<h1>CR-PROJECT</h1>
+<h1>CR</h1>
 </div>
 
 <div  data-role="content" data-theme="b" style="border:0; padding-top:40px;">
-<img  src="assets/icons/icon.png">
-<div id="tx_felogin_pi1211" style="border:0; margin-top:-10px;">
+
+
+
+<div id="tx_felogin_pi1211" style="border:0; margin-top:30px;">
+
 <form  action="http://cr.i-solucions.com/" target="_self"  method="post" 
-id="tx_felogin_pi1211_form"
-data-ajax="false"
-style="border:0;text-align:center;margin:0px;padding:0;margin-bottom:-30px;">
+id="tx_felogin_pi1211_form" data-ajax="false" style="border:0;text-align:center;margin:0px;padding:0;">
 	<div class="ui-grid-solo" >
-	<div class="ui-grid-a"  style="border:0;text-align:center;padding:3px;">
+
+	
 
 <fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
 <input type="text" id="user" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; "name="user" value="" placeholder="Nombre de usuario:" />
@@ -65,34 +67,37 @@ style="border:0;text-align:center;margin:0px;padding:0;margin-bottom:-30px;">
 <input type="password" id="pass" name="pass" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
 </fieldset>	
 	</div>
-	</div>
+
 <fieldset class="ui-grid-solo">
 	<div class="ui-block-a" style="padding:10px; text-align:center;margin-left:0px;">
-	<input  type="submit" name="submit" data-role="button" data-theme="b" class="btn-autha btn-reg large" style="padding-bottom:15px"  onclick="return ods_ajaxfelogin(this);" value="Iniciar sesión"  />
+	<input  type="submit" name="submit"  class="btn-autha btn-reg large" style="padding-bottom:-20px"  onclick="return ods_ajaxfelogin(this);" value="Iniciar sesi&oacute;n"  />
 	</div>
 </fieldset>
+
+
+
+<div id="tx_felogin_pi1211_indication" style="display: none;">
 <input type="hidden" name="logintype" value="login" />
 <input type="hidden" name="pid" value="35" />
 <input type="hidden" name="redirect_url" value="" data-ajax="false" />
 <input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" />
+
+<img src="assets/ui/loading.gif" alt="Comprobando..." /></div>
+
+<a data-role="button" data-inline="true" data-mini="true" href="http://cr.i-solucions.com/sc.html?tx_felogin_pi1[forgot]=1"  data-ajax="false" data-rel="internal"  >¿Olvidaste password?</a>
 </form>
-
-
-<div id="tx_felogin_pi1211_indication" style="display: none;"><img src="http://cr.i-solucions.com/typo3conf/ext/ods_ajaxfelogin/res/loading.gif" alt="loading..." /></div>
-
-
 </div>
 
-<a data-role="button" data-inline="true" data-mini="true" href="http://cr.i-solucions.com/sc.html?tx_felogin_pi1[forgot]=1"  data-ajax="false" data-rel="internal" data-theme="d" >¿Olvidaste password?</a>
-<hr />
-<div class="ui-grid-solo" style="text-align:center;">
-<a  href="http://cr.i-solucions.com/registro.html" data-ajax="false=" class="btn-autha btn-reg large" style="padding-bottom:15px" data-rel="internal" target="_self=">Regístrate ahora en <b>CR</b></a>
-	</div>
 
-	<div class="ui-grid-solo" style="text-align:center;">
+
+<div class="ui-grid-solo" style="text-align:center;">
+<a  href="http://cr.i-solucions.com/registro.html" data-ajax="false=" target="_self" class="btn-autha btn-reg large" style="padding-bottom:15px" data-rel="internal" target="_self=">Regístrate ahora en <b>CR</b></a>
+<br />
 <a class="btn-auth btn-facebook large" 
 data-ajax="false"
-href="https://www.facebook.com/login.php?api_key=261261113990340&cancel_url=http%3A%2F%2Fcr.i-solucions.com%2F&display=popup&fbconnect=1&next=http%3A%2F%2Fcr.i-solucions.com%2F&return_session=1&session_version=3&v=1.0" style="color:white;">Login con <b>Facebook</b></a>
+target="_self"
+data-rel="internal"
+href="https://www.facebook.com/login.php?api_key=261261113990340&cancel_url=http://cr.i-solucions.com&display=popup&fbconnect=1&next=http://cr.i-solucions.com/?id=1&return_session=1&session_version=3&v=1.0" style="color:white;">Login con <b>Facebook</b></a>
 	</div>
 
 
