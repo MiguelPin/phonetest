@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CR-PROJECT</title>
+<title>CRPROJECT</title>
 
 <meta name="robots" content="noindex,nofollow" />
 <meta charset="utf-8">
@@ -18,52 +18,53 @@
 
 <script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 <script src="assets/js/jquery.mobile.js" type="text/javascript" charset="utf-8"></script>
+
+
+
 <link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.theme-1.1.0.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.structure-1.1.0.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/CR.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/custom.css" />   
 
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 </head>
 
 <body onload="init()"  xmlns:fb="http://www.facebook.com/2008/fbml">
 
-
-
- 
 <div id="loginPage" data-role="page">
 
-   <div data-role="header" data-theme="h" data-position="fixed"><h1>CR</h1></div>
+	<div data-role="header" data-theme="h" data-position="fixed"><h1>CR</h1></div>
+ 	<div data-role="content">    
+		<img src="assets/icons/icon.png">
+   	    <form id="loginForm">
+   		 <div data-role="fieldcontain" class="ui-hide-label">  
+  
+		<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
+		<input type="text" id="username" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; " name="username" value="" placeholder="Nombre de usuario:" />
+		</fieldset>	
 
-    <div data-role="content">    
-		<br /><br />
-       <form id="loginForm">
-      <div class="ui-hide-label">
-           <label for="username">Username:</label>
-           <input type="text" name="username" id="username" value="" placeholder="Username" />
-       </div>
+		<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;margin-top:20px;">
+		<input type="password" id="password" name="password" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
+		</fieldset>	
 
-        <div  class="ui-hide-label">
-          <label for="password">Password:</label>
-           <input type="password" name="password" id="password" value="" placeholder="Password" />
-       </div>
+		 </div>
 
         <input type="submit" value="Login" id="submitButton">
         </form>
        
   	</div>
-
-   <div data-role="footer" >
+</div>
+   <div data-role="footer" data-position="fixed">
         <p>&copy; CR</p>
   </div>
 
-</div>
 
-
+ </div>
+</body>
 <script>
  $("#loginPage").live("pageinit", function(e) {
         checkPreAuth();
     });
 </script>
-</body>
+
 </html>
