@@ -14,6 +14,7 @@
 
 
 <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
 <script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
@@ -27,44 +28,68 @@
 <link type="text/css" rel="stylesheet"  href="assets/css/custom.css" />   
 
 
+
+
 </head>
+<body xmlns:fb="http://www.facebook.com/2008/fbml">
 
-<body onload="init()"  xmlns:fb="http://www.facebook.com/2008/fbml">
 
-<div id="loginPage" data-role="page">
+<div data-role="page" data-title="Login" data-theme="b">
+<div id="navigationContent"></div>
 
-	<div data-role="header" data-theme="h" data-position="fixed"><h1>CR</h1></div>
- 	<div data-role="content">    
-		<img src="assets/icons/icon.png">
-   	    <form id="loginForm">
-   		 <div data-role="fieldcontain" class="ui-hide-label">  
-  
-		<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
-		<input type="text" id="username" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; " name="username" value="" placeholder="Nombre de usuario:" />
-		</fieldset>	
 
-		<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;margin-top:20px;">
-		<input type="password" id="password" name="password" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
-		</fieldset>	
+<div id="mainContent" data-role="content" data-theme="b" style="border:0; padding-top:0px;">
 
-		 </div>
+<div id="c211" class="csc-default">
+<div id="tx_felogin_pi1211">
+<div class="tx-felogin-pi1">	
 
-        <input type="submit" value="Login" id="submitButton">
-        </form>
-       
-  	</div>
+
+<!-- ###LOGIN_FORM### -->
+<form action="http://cr.i-solucions.com/" target="_top" method="post" onsubmit="" id="tx_felogin_pi1211_form">
+	<fieldset>
+	<legend>Iniciar sesión</legend>
+	<div>
+		<label for="user">Nombre de usuario:</label>
+		<input type="text" id="user" name="user" value="" />
+	</div>
+	<div>
+		<label for="pass">Contraseña:</label>
+		<input type="password" id="pass" name="pass" value="" />
+	</div>
+	
+	
+	
+	<div>	
+		<input type="submit" name="submit" value="Iniciar sesión" onclick="return ods_ajaxfelogin(this);" />
+	</div>
+
+	<div class="felogin-hidden">
+		<input type="hidden" name="logintype" value="login" />
+		<input type="hidden" name="pid" value="35" />
+		<input type="hidden" name="redirect_url" value="" />
+		
+	</div>
+	</fieldset>
+</form>
+
+
+<p><a href="http://cr.i-solucions.com/?tx_felogin_pi1%5Bforgot%5D=1" target="_self" >¿Ha olvidado su contraseña?</a></p>
+
+
+
+
+
+	</div>
+	</div><div id="tx_felogin_pi1211_indication" style="display: none;"><img src="http://cr.i-solucions.com/typo3conf/ext/ods_ajaxfelogin/res/loading.gif" alt="loading..." /></div></div><!--TYPO3SEARCH_end--></div>
+
 </div>
-   <div data-role="footer" data-position="fixed">
-        <p>&copy; CR</p>
-  </div>
 
 
- </div>
+
 </body>
-<script>
- $("#loginPage").live("pageinit", function(e) {
-        checkPreAuth();
-    });
-</script>
-
 </html>
+
+
+
+
