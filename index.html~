@@ -14,7 +14,7 @@
 
 
 <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
+
 <script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
@@ -73,7 +73,7 @@
 	</fieldset>
 </form>
 
-
+<br /><br />
 <p><a href="http://cr.i-solucions.com/?tx_felogin_pi1%5Bforgot%5D=1" target="_self" >¿Ha olvidado su contraseña?</a></p>
 
 
