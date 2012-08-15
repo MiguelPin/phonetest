@@ -34,6 +34,7 @@
 <script src="assets/js/jquery.mobile.js" type="text/javascript" charset="utf-8"></script>
 
 <link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.css" />
+<link type="text/css" rel="stylesheet"  href="assets/css/CR.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/custom.css" />   
 
 
@@ -56,24 +57,58 @@ button {
 </style>
 
 </head> 
-<body> 
 
-<div data-role="page" id="page">
-	<div data-role="header">
-		<h1>CR</h1>
+<body xmlns:fb="http://www.facebook.com/2008/fbml">
+<div data-role="page" data-title="Login" data-theme="a">
+	<div data-role="header" data-theme="h" data-position="fixed">
+<h1>CR</h1>
 	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a data-role=button data-rel="internal" data-target="_self" href="http://cr.i-solucions.com/">LOGIN</a></li>
-            <li><a data-role=button data-rel="internal" data-target="_self"  href="http://cr.i-solucions.com/registro.html">REGISTER</a></li>
-		</ul>		
+
+
+<div id="mainContent" data-role="content" data-theme="b" style="border:0; padding-top:40px;">
+		
+
+
+
+
+<form  action="http://cr.i-solucions.com/" target="_self" method="post" onsubmit=""  data-ajax="false"  style="border:0;text-align:center;margin:0px;padding:0;margin-bottom:-30px;">
+	<div class="ui-grid-solo" >
+	<div class="ui-grid-a"  style="border:0;text-align:center;padding:3px;">
+
+<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
+<input type="text" id="user" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; "name="user" value="" placeholder="Nombre de usuario:" />
+</fieldset>	
+
+<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;margin-top:20px;">
+<input type="password" id="pass" name="pass" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
+</fieldset>	
 	</div>
-	<div data-role="footer" data-postition=fixed>
-		<h4>CR - Todos los derechos reservados</h4>
 	</div>
+<fieldset class="ui-grid-solo">
+	<div class="ui-block-a" style="padding:10px; text-align:center;margin-left:0px;">
+	<input  type="submit" name="submit" data-role="button" data-theme="b" class="btn-autha btn-reg large" style="padding-bottom:15px"  value="Iniciar sesión"  />
+	</div>
+</fieldset>
+<input type="hidden" name="logintype" value="login" />
+<input type="hidden" name="pid" value="35" />
+<input type="hidden" name="redirect_url" value="http://cr.i-solucions.com/index.php?id=58&no_cache=1" data-ajax="false" />
+<input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" />
+</form>
+<a data-role="button" data-inline="true" data-mini="true" href="http://cr.i-solucions.com/sc.html?tx_felogin_pi1[forgot]=1"  data-ajax="false" data-rel="internal" data-theme="d" >¿Olvidaste password?</a>
+<hr />
+<div class="ui-grid-solo" style="text-align:center;">
+<a  href="http://cr.i-solucions.com/registro.html" data-ajax="false=" class="btn-autha btn-reg large" style="padding-bottom:15px" data-rel="internal" target="_self=">Regístrate ahora en <b>CR</b></a>
+	</div>
+
+	<div class="ui-grid-solo" style="text-align:center;">
+<a class="btn-auth btn-facebook large" 
+data-ajax="false"
+href="https://www.facebook.com/login.php?api_key=261261113990340&cancel_url=http%3A%2F%2Fcr.i-solucions.com%2F&display=popup&fbconnect=1&next=http%3A%2F%2Fcr.i-solucions.com%2F&return_session=1&session_version=3&v=1.0" style="color:white;">Login con <b>Facebook</b></a>
+	</div>
+
+
 </div>
-
-
+</div>
 
 </body>
 </html>
