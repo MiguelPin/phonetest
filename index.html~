@@ -13,14 +13,6 @@
 <meta http-equiv="cleartype" content="on"> 
 
 
-<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-
-<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
-
-<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
-<script src="assets/js/jquery.mobile.js" type="text/javascript" charset="utf-8"></script>
-
-
 
 <link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.theme-1.1.0.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.structure-1.1.0.min.css" />
@@ -30,58 +22,80 @@
 
 
 
+
+
+
+
+
+<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/mobileinit.js" type="text/javascript"></script>
+<script src="assets/js/jquery.mobile.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/json2.js"></script>
+
+
 </head>
 <body xmlns:fb="http://www.facebook.com/2008/fbml">
 
 
-<div data-role="page" data-title="Login" data-theme="b">
-<div id="navigationContent"></div>
+<div data-role="page" data-title="CR" data-theme="b">
 
+<div data-role="header" data-position="fixed" data-theme="h" style="border:0;"> 
 
-<div id="mainContent" data-role="content" data-theme="b" style="border:0; padding-top:0px;">
+<h1>CR-PROJECT</h1>
+</div>
 
-<div id="c211" class="csc-default">
-<div id="tx_felogin_pi1211">
-<div class="tx-felogin-pi1">	
+<div  data-role="content" data-theme="b" style="border:0; padding-top:40px;">
+<img  src="assets/icons/icon.png">
+<div id="tx_felogin_pi1211" style="border:0; margin-top:-10px;">
+<form  action="http://cr.i-solucions.com/" target="_self"  method="post" 
+id="tx_felogin_pi1211_form"
+data-ajax="false"
+style="border:0;text-align:center;margin:0px;padding:0;margin-bottom:-30px;">
+	<div class="ui-grid-solo" >
+	<div class="ui-grid-a"  style="border:0;text-align:center;padding:3px;">
 
+<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
+<input type="text" id="user" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; "name="user" value="" placeholder="Nombre de usuario:" />
+</fieldset>	
 
-<!-- ###LOGIN_FORM### -->
-<form action="http://cr.i-solucions.com/" target="_top" method="post" onsubmit="" id="tx_felogin_pi1211_form">
-	<fieldset>
-	<legend>Iniciar sesión</legend>
-	<div>
-		<label for="user">Nombre de usuario:</label>
-		<input type="text" id="user" name="user" value="" />
+<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;margin-top:20px;">
+<input type="password" id="pass" name="pass" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
+</fieldset>	
 	</div>
-	<div>
-		<label for="pass">Contraseña:</label>
-		<input type="password" id="pass" name="pass" value="" />
 	</div>
-	
-	
-	
-	<div>	
-		<input type="submit" name="submit" value="Iniciar sesión" onclick="return ods_ajaxfelogin(this);" />
+<fieldset class="ui-grid-solo">
+	<div class="ui-block-a" style="padding:10px; text-align:center;margin-left:0px;">
+	<input  type="submit" name="submit" data-role="button" data-theme="b" class="btn-autha btn-reg large" style="padding-bottom:15px"  onclick="return ods_ajaxfelogin(this);" value="Iniciar sesión"  />
 	</div>
-
-	<div class="felogin-hidden">
-		<input type="hidden" name="logintype" value="login" />
-		<input type="hidden" name="pid" value="35" />
-		<input type="hidden" name="redirect_url" value="" />
-		
-	</div>
-	</fieldset>
+</fieldset>
+<input type="hidden" name="logintype" value="login" />
+<input type="hidden" name="pid" value="35" />
+<input type="hidden" name="redirect_url" value="" data-ajax="false" />
+<input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" />
 </form>
 
-<br /><br />
-<p><a href="http://cr.i-solucions.com/?tx_felogin_pi1%5Bforgot%5D=1" target="_self" >¿Ha olvidado su contraseña?</a></p>
+
+<div id="tx_felogin_pi1211_indication" style="display: none;"><img src="http://cr.i-solucions.com/typo3conf/ext/ods_ajaxfelogin/res/loading.gif" alt="loading..." /></div>
 
 
+</div>
 
-
-
+<a data-role="button" data-inline="true" data-mini="true" href="http://cr.i-solucions.com/sc.html?tx_felogin_pi1[forgot]=1"  data-ajax="false" data-rel="internal" data-theme="d" >¿Olvidaste password?</a>
+<hr />
+<div class="ui-grid-solo" style="text-align:center;">
+<a  href="http://cr.i-solucions.com/registro.html" data-ajax="false=" class="btn-autha btn-reg large" style="padding-bottom:15px" data-rel="internal" target="_self=">Regístrate ahora en <b>CR</b></a>
 	</div>
-	</div><div id="tx_felogin_pi1211_indication" style="display: none;"><img src="http://cr.i-solucions.com/typo3conf/ext/ods_ajaxfelogin/res/loading.gif" alt="loading..." /></div></div><!--TYPO3SEARCH_end--></div>
+
+	<div class="ui-grid-solo" style="text-align:center;">
+<a class="btn-auth btn-facebook large" 
+data-ajax="false"
+href="https://www.facebook.com/login.php?api_key=261261113990340&cancel_url=http%3A%2F%2Fcr.i-solucions.com%2F&display=popup&fbconnect=1&next=http%3A%2F%2Fcr.i-solucions.com%2F&return_session=1&session_version=3&v=1.0" style="color:white;">Login con <b>Facebook</b></a>
+	</div>
+
+
 
 </div>
 
@@ -89,6 +103,16 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
