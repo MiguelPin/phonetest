@@ -38,7 +38,6 @@
 
 <gap:splash src="splash/android/ldpi.png" gap:platform="blackberry" />
 <icon src="assets/icons/icon.png" width="57" height="57" gap:platform="blackberry" gap:role="default"/>
-
 <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
 
 <preference name="stay-in-webview" value="true" />
