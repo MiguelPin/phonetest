@@ -4,7 +4,7 @@
 	id		= "com.crproject.cr"
 	version 	= "0.0.3">
 
-	<name>CRPROJECT</name>
+	<name>CR</name>
 
 	<description>
 		Beta 0.0.3
@@ -74,6 +74,5 @@
 <feature name="http://api.phonegap.com/1.0/notification"/>
 <feature name="http://api.phonegap.com/1.0/device"/>
 
-
-	<preference name="orientation" value="portrait" />
+<preference name="orientation" value="portrait" />
 </widget>
