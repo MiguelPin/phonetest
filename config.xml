@@ -58,6 +58,7 @@
 <gap:plugin name="ChildBrowser" version="~3" /> 
 <feature name="http://plugins.phonegap.com/ChildBrowser/1.0.2" />
 
+
 <access origin="http://cr.i-solucions.com" subdomains="true"/>
 <access origin="http://pro1.i-solucions.com" subdomains="true"/>
 <access origin="http://youtu.be" subdomains="true"/>
