@@ -13,102 +13,60 @@
 <meta http-equiv="cleartype" content="on"> 
 
 
-                <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
 
-
-		<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
-
+<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 <script src="assets/js/jquery.mobile.js" type="text/javascript" charset="utf-8"></script>
-
-<link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.css" />
+<link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.theme-1.1.0.min.css" />
+<link type="text/css" rel="stylesheet"  href="assets/css/jquery.mobile.structure-1.1.0.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/CR.min.css" />
 <link type="text/css" rel="stylesheet"  href="assets/css/custom.css" />   
 
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+</head>
+
+<body onload="init()"  xmlns:fb="http://www.facebook.com/2008/fbml">
 
 
-<style>
-button {
-	width: 15em;
-	padding: .5em;
-	color: #ffffff;
-	text-shadow: 1px 1px 1px #000;
-	border: solid thin #882d13;
-	-webkit-border-radius: .7em;
-	-moz-border-radius: .7em;
-	border-radius: .7em;
-	-webkit-box-shadow: 2px 2px 3px #999; 
-	box-shadow: 2px 2px 2px #bbb;
-	background-color: #ce401c;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b));
-}
-</style>
 
-</head> 
+ 
+<div id="loginPage" data-role="page">
 
-<body xmlns:fb="http://www.facebook.com/2008/fbml">
-<div data-role="page" data-title="Login" data-theme="a">
-	<div data-role="header" data-theme="h" data-position="fixed">
+   <div data-role="header" data-theme="h" data-position="fixed">
 <h1>CR</h1>
 	</div>
 
+    <div data-role="content">    
 
-<div id="mainContent" data-role="content" data-theme="b" style="border:0; padding-top:40px;">
-		
+       <form id="loginForm">
+      <div data-role="fieldcontain" class="ui-hide-label">
+           <label for="username">Username:</label>
+           <input type="text" name="username" id="username" value="" placeholder="Username" />
+       </div>
 
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="password">Password:</label>
+           <input type="password" name="password" id="password" value="" placeholder="Password" />
+       </div>
 
+        <input type="submit" value="Login" id="submitButton">
+        </form>
+       
+  </div>
 
+   <div data-role="footer">
+        <h4>&copy; CR</h4>
+  </div>
 
-<form  action="http://cr.i-solucions.com/" target="_self" method="post" onsubmit=""  data-ajax="false"  style="border:0;text-align:center;margin:0px;padding:0;margin-bottom:-30px;">
-	<div class="ui-grid-solo" >
-	<div class="ui-grid-a"  style="border:0;text-align:center;padding:3px;">
-
-<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;">
-<input type="text" id="user" style="padding-left:35px;width:220px; background:url(assets/ui/111-user.png) no-repeat 7px 7px; "name="user" value="" placeholder="Nombre de usuario:" />
-</fieldset>	
-
-<fieldset data-role="fieldcontain" class="ui-hide-label" style="border:0;text-align:center;margin-left:5px;margin-top:20px;">
-<input type="password" id="pass" name="pass" value="" style="padding-left:35px;width:220px;background:#eaeaea url(assets/ui/30-key.png) no-repeat 12px 3px;"placeholder="Password" />
-</fieldset>	
-	</div>
-	</div>
-<fieldset class="ui-grid-solo">
-	<div class="ui-block-a" style="padding:10px; text-align:center;margin-left:0px;">
-	<input  type="submit" name="submit" data-role="button" data-theme="b" class="btn-autha btn-reg large" style="padding-bottom:15px"  value="Iniciar sesión"  />
-	</div>
-</fieldset>
-<input type="hidden" name="logintype" value="login" />
-<input type="hidden" name="pid" value="35" />
-<input type="hidden" name="redirect_url" value="http://cr.i-solucions.com/index.php?id=58&no_cache=1" data-ajax="false" />
-<input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" />
-</form>
-<a data-role="button" data-inline="true" data-mini="true" href="http://cr.i-solucions.com/sc.html?tx_felogin_pi1[forgot]=1"  data-ajax="false" data-rel="internal" data-theme="d" >¿Olvidaste password?</a>
-<hr />
-<div class="ui-grid-solo" style="text-align:center;">
-<a  href="http://cr.i-solucions.com/registro.html" data-ajax="false=" class="btn-autha btn-reg large" style="padding-bottom:15px" data-rel="internal" target="_self=">Regístrate ahora en <b>CR</b></a>
-	</div>
-
-	<div class="ui-grid-solo" style="text-align:center;">
-<a class="btn-auth btn-facebook large" 
-data-ajax="false"
-href="https://www.facebook.com/login.php?api_key=261261113990340&cancel_url=http%3A%2F%2Fcr.i-solucions.com%2F&display=popup&fbconnect=1&next=http%3A%2F%2Fcr.i-solucions.com%2F&return_session=1&session_version=3&v=1.0" style="color:white;">Login con <b>Facebook</b></a>
-	</div>
+</div>
 
 
 </div>
-</div>
-
+47<script>
+48 $("#loginPage").live("pageinit", function(e) {
+49        checkPreAuth();
+50    });
+51</script>
 </body>
 </html>
